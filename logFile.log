@@ -1,0 +1,7 @@
+03:28:32 [File Watcher] DEBUG o.s.b.devtools.restart.Restarter - Restarting application
+03:28:32 [Thread-18] DEBUG o.s.b.devtools.restart.Restarter - Stopping application
+03:28:32 [Thread-18] DEBUG o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3caeb4e5, started on Mon Jan 13 11:26:07 CST 2020
+03:28:32 [Thread-18] DEBUG o.s.c.e.PropertySourcesPropertyResolver - Found key 'spring.liveBeansView.mbeanDomain' in PropertySource 'systemProperties' with value of type String
+03:28:32 [Thread-18] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+03:28:33 [Thread-18] DEBUG o.s.b.devtools.restart.Restarter - Created RestartClassLoader org.springframework.boot.devtools.restart.classloader.RestartClassLoader@2eb8d637
+03:28:33 [Thread-18] DEBUG o.s.b.devtools.restart.Restarter - Starting application com.oasis.springboot.SpringbootApplication with URLs [file:/D:/IdeaProjects/springboot/target/classes/]
