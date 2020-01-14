@@ -1,11 +1,22 @@
 server:
   port: 8080
+
+# 配置Mybatis
+mybatis:
+  type-aliases-package: com.oasis.springboot.dao.pojo
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    # 开启驼峰命名转换，如：Table(create_time) -> Entity(createTime)。
+    # 需要我们关心怎么进行字段匹配，mybatis会自动识别`大写字母与下划线`
+    map-underscore-to-camel-case: true
+
+# 打印SQL日志
+logging:
+  level:
+    com.oasis.springboot.dao: INFO
+
+
 spring:
-  devtools:
-    restart:
-      enabled: true
-      additional-paths: src/main/java
-      additional-exclude: WEB-INF/**
   #设置数据库连接及连接池
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
@@ -13,6 +24,7 @@ spring:
     username: root
     password: root
     platform: mysql
+    # 设置Druid数据源连接池
     type: com.alibaba.druid.pool.DruidDataSource
     druid:
       initial-size: 5  # 初始化大小
@@ -47,9 +59,9 @@ spring:
         reset-enable: true
         login-username: admin
         login-password: admin
-  #设置JPA配置--使用hibernate orm框架
-  jpa:
-    database: mysql
-    hibernate:
-      ddl-auto: update
-    show-sql: true
+  # 热部署
+  devtools:
+    restart:
+      enabled: true
+      additional-paths: src/main/java
+      additional-exclude: WEB-INF/**
